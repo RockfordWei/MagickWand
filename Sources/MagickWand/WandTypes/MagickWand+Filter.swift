@@ -29,49 +29,75 @@
 extension MagickWand {
 
     public enum Filter {
+        
+        case pointFilter
+        case boxFilter
+        case triangleFilter
+        case hermiteFilter
+        case hannFilter
+        case hammingFilter
+        case blackmanFilter
+        case gaussianFilter
+        case quadraticFilter
+        case cubicFilter
+        case catromFilter
+        case mitchellFilter
+        case jincFilter
+        case sincFilter
+        case sincFastFilter
+        case kaiserFilter
+        case welchFilter
+        case parzenFilter
+        case bohmanFilter
+        case bartlettFilter
+        case lagrangeFilter
+        case lanczosFilter
+        case lanczosSharpFilter
+        case lanczos2Filter
+        case lanczos2SharpFilter
+        case robidouxFilter
+        case robidouxSharpFilter
+        case cosineFilter
+        case splineFilter
+        case lanczosRadiusFilter
+        case cubicSplineFilter
+        case sentinelFilter
 
-        case blackman
-        case box
-        case catrom
-        case gaussian
-        case hanning
-        case hermite
-        case lanczos
-        case mitchell
-        case sinc
-        case triangle
-        case kaiser
-        case sentinel
-        case welsh
 
-        var filter: FilterTypes {
+        var _magick: FilterType {
             switch self {
-            case .blackman:
-                return BlackmanFilter
-            case .box:
-                return BoxFilter
-            case .catrom:
-                return CatromFilter
-            case .gaussian:
-                return GaussianFilter
-            case .hanning:
-                return HanningFilter
-            case .hermite:
-                return HermiteFilter
-            case .lanczos:
-                return LanczosFilter
-            case .mitchell:
-                return MitchellFilter
-           	case .sinc:
-                return SincFilter
-            case .triangle:
-                return TriangleFilter
-            case .kaiser:
-                return KaiserFilter
-            case .sentinel:
-                return SentinelFilter
-            case .welsh:
-                return WelshFilter
+            case .pointFilter: return PointFilter
+            case .boxFilter: return BoxFilter
+            case .triangleFilter: return TriangleFilter
+            case .hermiteFilter: return HermiteFilter
+            case .hannFilter: return HannFilter
+            case .hammingFilter: return HammingFilter
+            case .blackmanFilter: return BlackmanFilter
+            case .gaussianFilter: return GaussianFilter
+            case .quadraticFilter: return QuadraticFilter
+            case .cubicFilter: return CubicFilter
+            case .catromFilter: return CatromFilter
+            case .mitchellFilter: return MitchellFilter
+            case .jincFilter: return JincFilter
+            case .sincFilter: return SincFilter
+            case .sincFastFilter: return SincFastFilter
+            case .kaiserFilter: return KaiserFilter
+            case .welchFilter: return WelchFilter
+            case .parzenFilter: return ParzenFilter
+            case .bohmanFilter: return BohmanFilter
+            case .bartlettFilter: return BartlettFilter
+            case .lagrangeFilter: return LagrangeFilter
+            case .lanczosFilter: return LanczosFilter
+            case .lanczosSharpFilter: return LanczosSharpFilter
+            case .lanczos2Filter: return Lanczos2Filter
+            case .lanczos2SharpFilter: return Lanczos2SharpFilter
+            case .robidouxFilter: return RobidouxFilter
+            case .robidouxSharpFilter: return RobidouxSharpFilter
+            case .cosineFilter: return CosineFilter
+            case .splineFilter: return SplineFilter
+            case .lanczosRadiusFilter: return LanczosRadiusFilter
+            case .cubicSplineFilter: return CubicSplineFilter
+            case .sentinelFilter: return SentinelFilter
             }
         }
     }

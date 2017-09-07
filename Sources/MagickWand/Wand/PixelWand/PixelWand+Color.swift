@@ -117,21 +117,21 @@ extension PixelWand {
             }
         }
         
-        public var info: MagickWand.ColorInfo {
-            get {
-                var infoPacket = MagickPixelPacket()
-                
-                #if !os(Linux)
-                    PixelGetMagickColor(self.pointer, &infoPacket)
-                #endif
-                
-                return MagickWand.ColorInfo(infoPacket)
-            }
-            set {
-                var packet = newValue.info
-                PixelSetMagickColor(self.pointer, &packet)
-            }
-        }
+//        public var info: MagickWand.PixelPacket {
+//            get {
+//                var infoPacket = _PixelPacket()
+//                
+//                #if !os(Linux)
+//                    PixelGetMagickColor(self.pointer, &infoPacket)
+//                #endif
+//                
+//                return MagickWand.PixelPacket(infoPacket)
+//            }
+//            set {
+//                var packet = newValue.info
+//                PixelSetColor(self.pointer, &packet)
+//            }
+//        }
     }
     
     public var colors: Colors {
