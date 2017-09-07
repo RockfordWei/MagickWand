@@ -52,7 +52,7 @@ public struct MagickWand {
 
     public static var isInstantiated: Bool {
         #if os(Linux)
-            return IsMagickInstantiated().bool || self.wandInstantiated
+            return IsMagickWandInstantiated().bool || self.wandInstantiated
         #else
             return IsMagickWandInstantiated().bool
         #endif
